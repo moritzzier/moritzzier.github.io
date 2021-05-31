@@ -18,6 +18,10 @@ jobs:
           npm run export
           touch out/.nojekyll
 
+      - name: Test
+        run: |
+          npm run test
+          
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
