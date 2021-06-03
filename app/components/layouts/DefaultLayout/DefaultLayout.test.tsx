@@ -8,4 +8,9 @@ describe('DefaultLayout Layout', () => {
         expect(screen.getByRole('main'));
         expect(screen.getByRole('contentinfo')); //footer
     })
+
+    it('should render its children', () => {
+        render(<DefaultLayout><button>Test</button></DefaultLayout>);
+        expect(screen.getByRole('button', {name: 'Test'}));
+    })
 })
