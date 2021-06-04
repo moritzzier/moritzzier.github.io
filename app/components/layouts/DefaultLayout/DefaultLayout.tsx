@@ -1,20 +1,25 @@
 import * as React from 'react'
-import { Footer } from '../../elements/Footer/Footer'
-import NavBar from '../../elements/NavBar/NavBar'
+import { Footer, IFooterProps } from '../../elements/Footer/Footer'
+import NavBar, { INavBarProps } from '../../elements/NavBar/NavBar'
 
 export const DefaultLayout: React.FC<IDefaultLayoutProps> = (
   props: IDefaultLayoutProps
 ) => {
-  const { children } = props
+  const { children, mainProps, navProps, footerProps } = props
   return (
     <>
-      <NavBar />
-      <main>{children}</main>
-      <Footer/>
+      <NavBar {...navProps}/>
+      <main {...mainProps}>{children}</main>
+      <Footer {...footerProps}/>
     </>
   )
 }
 
 export interface IDefaultLayoutProps {
-  children?: React.ReactNode
+  children?: React.ReactNode,
+  mainProps?: React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>,
+  navProps?: INavBarProps;
+  footerProps?: IFooterProps;
 }
+
+export default DefaultLayout;

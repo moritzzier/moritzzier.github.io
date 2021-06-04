@@ -3,7 +3,7 @@ import * as React from 'react';
 export const NavBar: React.FC<INavBarProps> = (props: INavBarProps) => {
     const {children} = props;
     return(
-        <nav>
+        <nav className="bg-paper">
             {children}
         </nav>
     );
