@@ -1,12 +1,13 @@
 import * as React from 'react';
 
 export const Footer: React.FC<IFooterProps> = (props: IFooterProps) => {
-    const {children} = props;
+    const {children, className} = props;
     return(
-        <footer>{children}</footer>        
+        <footer className={className}>{children}</footer>        
     );
 }
 
 export interface IFooterProps {
     children?: React.ReactNode;
+    className?: string;
 }

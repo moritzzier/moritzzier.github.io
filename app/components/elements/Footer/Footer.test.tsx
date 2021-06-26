@@ -7,4 +7,9 @@ describe('Footer Element', () => {
         render(<Footer/>)
         expect(screen.getByRole('contentinfo'));
     })
+
+    it('should take className prop', () => {
+        render(<Footer className='hidden'/>)
+        expect(screen.getByRole('contentinfo').classList.contains('hidden')).toBe(true)
+    })
 })

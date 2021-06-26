@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Noto+Serif&display=swap" rel="stylesheet"/>
       </Head>
-      <DefaultLayout mainProps={{className: 'bg-background pl-16'}} footerProps={{children: <FooterContent />}}>
+      <DefaultLayout mainProps={{className: 'bg-background pl-16'}} footerProps={{className: '', children: <FooterContent />}}>
         <section className="h-screen">
           <h1 className="text-5xl text-typo-dark font-display">
             Hi,<br/>
