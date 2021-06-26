@@ -17,11 +17,11 @@ export default function Home() {
         />
       </Head>
       <DefaultLayout
-        mainProps={{ className: 'bg-background pl-8' }}
+        mainProps={{ className: 'bg-background' }}
         footerProps={{ className: '', children: <FooterContent /> }}
       >
-        <section className="">
-          <div className="pt-32">
+        <section className="h-screen flex flex-col">
+          <div className="pl-8 pt-32">
             <h1 className="text-5xl text-typo-dark font-display">
               Hi,
               <br />
@@ -31,24 +31,34 @@ export default function Home() {
               Fullstack Webdeveloper
             </p>
           </div>
-          <span className="text-typo-dark mt-16 inline-block">
+          <span className="text-typo-dark mt-16 flex justify-center animate-bounce">
             <ArrowDown />
           </span>
         </section>
         <section className="h-screen">
+          <div className="pl-8 pt-32">
           <h2 id="about" className="text-4xl text-typo-dark font-display">
             About
           </h2>
+          <p className="text-typo-light font-body text-justify pr-8">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Tempora numquam architecto deleniti quod. 
+            Eveniet dolorum quo doloribus reiciendis sapiente illo placeat hic unde corrupti. 
+            Ipsum adipisci fugiat at delectus sint.
+          </p>
+          </div>
         </section>
         <section className="h-screen">
+          <div className="pl-8 pt-32">
           <h2 id="contact" className="text-4xl text-typo-dark font-display">
             Contact
           </h2>
-          <p className="text-typo-dark font-body">Find me on:</p>
-          <ul className="text-typo-dark font-body">
-            <li>Email</li>
-            <li>Github</li>
+          <p className="text-typo-light  font-body">How to reach me:</p>
+          <ul className="text-typo-light font-body list-disc list-inside">
+            <li><a href="mailto:moritz.zier@gmail.com" className="underline">Email</a></li>
+            <li><a href="https://github.com/moritzzier" className="underline">Github</a></li>
           </ul>
+          </div>
         </section>
       </DefaultLayout>
     </>
