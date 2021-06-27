@@ -43,7 +43,7 @@ export default function Home() {
         mainProps={{ className: 'bg-background' }}
         footerProps={{ className: '', children: <FooterContent /> }}
       >
-        <section id="home" className="h-screen flex flex-col">
+        <section id="home" className="h-screen flex flex-col justify-center">
           <ContentBox>
             <h1 className="lg:text-7xl text-5xl text-typo-dark font-display">
               Hi,
@@ -58,7 +58,7 @@ export default function Home() {
             <ArrowDown />
           </span>
         </section>
-        <section id="about" className="h-screen">
+        <section id="about" className="h-screen flex flex-col justify-center ">
           <ContentBox>
             <h2 className="lg:text-5xl text-4xl text-typo-dark font-display">
               About
@@ -71,7 +71,7 @@ export default function Home() {
             </p>
           </ContentBox>
         </section>
-        <section id="contact" className="h-screen">
+        <section id="contact" className="h-screen flex flex-col justify-center">
           <ContentBox>
             <h2 className="lg:text-5xl text-4xl text-typo-dark font-display">Contact</h2>
             <p className="lg:pt-4 text-typo-light font-body ">How to reach me:</p>
