@@ -15,8 +15,7 @@
     "next": "10.2.3",
     "postcss": "^8.3.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "tailwindcss": "^2.1.2"
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@testing-library/dom": "^7.31.0",
@@ -30,6 +29,7 @@
     "eslint": "^7.27.0",
     "jest": "^27.0.3",
     "prettier": "^2.3.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "4.2.4"
   }
 }

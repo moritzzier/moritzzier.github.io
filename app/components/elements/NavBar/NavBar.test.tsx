@@ -7,8 +7,8 @@ describe('NavBar Element', () => {
         render(<NavBar/>);
         expect(screen.getByRole('navigation'));
     })
-    it('should render children', () => {
-        render(<NavBar><button>Test</button></NavBar>);
-        expect(screen.getByRole('button', {name: 'Test'}));
+    it('should render links', () => {
+        render(<NavBar menuItems={[{href: 'test', name: 'test', icon: <div></div>}]}></NavBar>);
+        expect(screen.getByRole('link', {name: 'test'}));
     })
 })

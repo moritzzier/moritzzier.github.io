@@ -21,7 +21,7 @@ export default function Home() {
         footerProps={{ className: '', children: <FooterContent /> }}
       >
         <section className="h-screen flex flex-col">
-          <div className="pl-8 pt-32">
+          <div className="lg:pl-16 md:pl-12 pl-8 pt-32">
             <h1 className="text-5xl text-typo-dark font-display">
               Hi,
               <br />
