@@ -2,6 +2,10 @@ import Head from 'next/head'
 import { DefaultLayout } from '../app/components/layouts/DefaultLayout/DefaultLayout'
 import FooterContent from '../app/components/templates/FooterContent/FooterContent'
 import ArrowDown from '../app/components/elements/Icons/ArrowDown'
+import UserIcon from '../app/components/elements/Icons/User'
+import HomeIcon from '../app/components/elements/Icons/Home'
+import MailIcon from '../app/components/elements/Icons/Mail'
+
 
 export default function Home() {
   return (
@@ -17,10 +21,26 @@ export default function Home() {
         />
       </Head>
       <DefaultLayout
+        navProps={{menuItems: [
+          {
+            href: '#home',
+            name: 'Home',
+            icon: <HomeIcon />
+          },
+          {
+          href: '#about',
+          name: 'About',
+          icon: <UserIcon />
+        },
+        {
+          href: '#contact',
+          name: 'Contact',
+          icon: <MailIcon />
+        }]}}
         mainProps={{ className: 'bg-background' }}
         footerProps={{ className: '', children: <FooterContent /> }}
       >
-        <section className="h-screen flex flex-col">
+        <section id="home "className="h-screen flex flex-col">
           <div className="lg:pl-16 md:pl-12 pl-8 pt-32">
             <h1 className="text-5xl text-typo-dark font-display">
               Hi,
@@ -35,9 +55,9 @@ export default function Home() {
             <ArrowDown />
           </span>
         </section>
-        <section className="h-screen">
+        <section id="about" className="h-screen">
           <div className="pl-8 pt-32">
-          <h2 id="about" className="text-4xl text-typo-dark font-display">
+          <h2 className="text-4xl text-typo-dark font-display">
             About
           </h2>
           <p className="text-typo-light font-body text-justify pr-8">
@@ -48,9 +68,9 @@ export default function Home() {
           </p>
           </div>
         </section>
-        <section className="h-screen">
+        <section id="contact" className="h-screen">
           <div className="pl-8 pt-32">
-          <h2 id="contact" className="text-4xl text-typo-dark font-display">
+          <h2 className="text-4xl text-typo-dark font-display">
             Contact
           </h2>
           <p className="text-typo-light  font-body">How to reach me:</p>
