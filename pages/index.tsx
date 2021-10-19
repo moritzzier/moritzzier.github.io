@@ -6,7 +6,9 @@ import {
   Link,
   UnorderedList,
   ListItem,
+  Text,
 } from '@chakra-ui/react'
+import Navbar from './../components/Navbar'
 
 export default function Home() {
   return (
@@ -21,50 +23,38 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
+      <Navbar />
       <Container>
         <Box id="home">
-          <Heading size="h1">
-            Hi,
-            <br />
-            I'm Moritz!
-          </Heading>
-          <p className="text-2xl text-typo-light font-body">
-            Fullstack Webdeveloper
-          </p>
-          <span className="text-typo-dark mt-16 flex justify-center animate-bounce"></span>
+          <Heading size="2xl">Hi, I'm Moritz!</Heading>
+          <Text>Welcome to my webdev portfolio.</Text>
         </Box>
         <Box id="about">
-          <Heading size="h2">About</Heading>
-          <p className=" text-typo-light font-body text-justify">
+          <Heading size="lg">About</Heading>
+          <Text>
             I'm a software/webdeveloper from Germany.
             <br />I have a passion for fast and efficent development and clean
             code. During my years of fullstack-development I learned the
             importance of good design to meet and quickly adjust to the needs of
             my clients.
-          </p>
+          </Text>
         </Box>
         <Box id="projects">
-          <Heading size="h2">Projects</Heading>
-          <p className="lg:pt-4 text-typo-light font-body text-justify">
+          <Heading size="lg">Projects</Heading>
+          <Text>
             A nice view is in development. In the meantime checkout my{' '}
-            <a href="https://github.com/moritzzier" className="underline">
-              Github!
-            </a>
-          </p>
+            <Link href="https://github.com/moritzzier">Github!</Link>
+          </Text>
         </Box>
         <Box id="contact">
-          <Heading size="h2">Contact</Heading>
-          <p className="lg:pt-4 text-typo-light font-body ">How to reach me:</p>
+          <Heading size="lg">Contact</Heading>
+          <Text>How to reach me:</Text>
           <UnorderedList>
             <ListItem>
-              <Link href="mailto:moritz.zier@gmail.com" className="underline">
-                Email
-              </Link>
+              <Link href="mailto:moritz.zier@gmail.com">Email</Link>
             </ListItem>
             <ListItem>
-              <Link href="https://github.com/moritzzier" className="underline">
-                Github
-              </Link>
+              <Link href="https://github.com/moritzzier">Github</Link>
             </ListItem>
           </UnorderedList>
         </Box>

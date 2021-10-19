@@ -14,7 +14,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
-      "@elements": ["./app/components/elements"],
+      "@elements": ["./components"],
       "@layouts": ["./app/components/layouts"],
       "@modules": ["./app/components/modules"],
       "@templates": ["./app/components/templates"],
