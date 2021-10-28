@@ -1,18 +1,10 @@
 import Head from 'next/head'
 import {
   Container,
-  Box,
-  Heading,
-  Link,
-  UnorderedList,
-  ListItem,
-  Text,
 } from '@chakra-ui/react'
 import Navbar from './../components/Navbar'
-import Hero from '../components/Hero'
-import ProfileCard from '../components/ProfileCard'
-import { CurlyArrowRight } from '../components/svg/CurlyArrowRight'
 import { IntroBlock } from '../template/IntroBlock'
+import { HeroBlock } from '../template/HeroBlock'
 
 export default function Home() {
   return (
@@ -29,7 +21,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Container>
-        <Hero />
+        <HeroBlock />
         <IntroBlock />
         {/* <Box id="home">
           <Heading size="2xl">Hi, I'm Moritz!</Heading>
