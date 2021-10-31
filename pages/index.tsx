@@ -5,6 +5,7 @@ import {
 import Navbar from './../components/Navbar'
 import { IntroBlock } from '../template/IntroBlock'
 import { HeroBlock } from '../template/HeroBlock'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -57,6 +58,7 @@ export default function Home() {
           </UnorderedList>
         </Box> */}
       </Container>
+      <Footer />
     </>
   )
 }

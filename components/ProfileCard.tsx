@@ -34,7 +34,7 @@ const ProfileCard = () => {
         <Icon as={MdHeadset} h={6} w={6} color="white" />
 
         <Text mx={3} color="white" fontWeight="bold" fontSize="lg">
-          Building
+          Coding...
         </Text>
       </Flex>
 
