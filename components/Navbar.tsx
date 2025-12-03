@@ -1,5 +1,6 @@
 "use client"
 import React from 'react'
+import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false)
@@ -43,19 +44,17 @@ export default function Navbar() {
               aria-label="Open menu"
               onClick={() => setMobileNavOpen(true)}
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              <Menu size={24} />
             </button>
 
             {mobileNavOpen && (
               <div className="absolute top-0 left-0 right-0 flex flex-col p-2 pb-4 m-2 bg-white dark:bg-gray-800 gap-3 rounded shadow-sm">
                 <button
-                  className="self-end p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-2xl"
+                  className="self-end p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                   aria-label="Close menu"
                   onClick={() => setMobileNavOpen(false)}
                 >
-                  ×
+                  <X size={24} />
                 </button>
 
                 <button className="w-full px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
