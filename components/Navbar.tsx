@@ -1,107 +1,83 @@
 "use client"
 import React from 'react'
-import { HiMenu } from 'react-icons/hi'
-
-import {
-  Box,
-  Flex,
-  HStack,
-  Button,
-  VStack,
-  IconButton,
-  CloseButton,
-} from '@chakra-ui/react'
 
 export default function Navbar() {
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false)
 
   return (
-    <Box
-      as="header"
-      bg={{ base: 'white', _dark: 'gray.800' }}
-      w="full"
-      px={{ base: 2, sm: 4 }}
-      py={4}
-      shadow="md"
-    >
-      <Flex alignItems="center" justifyContent="space-between" mx="auto">
-        <Flex>
-          <Box
-            as="a"
+    <header className="w-full px-2 sm:px-4 py-4 bg-white dark:bg-gray-800 shadow-md">
+      <div className="flex items-center justify-between mx-auto">
+        <div className="flex">
+          <a
             href="/"
             title="Home Page"
-            display="flex"
-            alignItems="center"
+            className="flex items-center"
           >
-            <Box srOnly>Home</Box>
-          </Box>
-          <Box as="h1" fontSize="xl" fontWeight="medium" ml="2">
+            <span className="sr-only">Home</span>
+          </a>
+          <h1 className="text-xl font-medium ml-2">
             Moritz Zier
-          </Box>
-        </Flex>
-        <HStack display="flex" alignItems="center" gap={1}>
-          <HStack
-            gap={1}
-            mr={1}
-            color="brand.500"
-            display={{ base: 'none', md: 'inline-flex' }}
-          >
-            <Button variant="ghost">Features</Button>
-            <Button variant="ghost">Pricing</Button>
-            <Button variant="ghost">Blog</Button>
-            <Button variant="ghost">Company</Button>
-            <Button variant="ghost">Sign in</Button>
-          </HStack>
-          <Box display={{ base: 'inline-flex', md: 'none' }}>
-            <IconButton
-              display={{ base: 'flex', md: 'none' }}
+          </h1>
+        </div>
+        <div className="flex items-center gap-1">
+          <div className="hidden md:inline-flex gap-1 mr-1">
+            <button className="px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+              Features
+            </button>
+            <button className="px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+              Pricing
+            </button>
+            <button className="px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+              Blog
+            </button>
+            <button className="px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+              Company
+            </button>
+            <button className="px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+              Sign in
+            </button>
+          </div>
+          <div className="inline-flex md:hidden">
+            <button
+              className="flex md:hidden p-2 rounded text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
               aria-label="Open menu"
-              color={{ base: 'gray.800', _dark: 'inherit' }}
-              variant="ghost"
               onClick={() => setMobileNavOpen(true)}
             >
-              <HiMenu size={20} />
-            </IconButton>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
 
-            <VStack
-              pos="absolute"
-              top={0}
-              left={0}
-              right={0}
-              display={mobileNavOpen ? 'flex' : 'none'}
-              flexDirection="column"
-              p={2}
-              pb={4}
-              m={2}
-              bg={{ base: 'white', _dark: 'gray.800' }}
-              gap={3}
-              rounded="sm"
-              shadow="sm"
-            >
-              <CloseButton
-                aria-label="Close menu"
-                onClick={() => setMobileNavOpen(false)}
-              />
+            {mobileNavOpen && (
+              <div className="absolute top-0 left-0 right-0 flex flex-col p-2 pb-4 m-2 bg-white dark:bg-gray-800 gap-3 rounded shadow-sm">
+                <button
+                  className="self-end p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors text-2xl"
+                  aria-label="Close menu"
+                  onClick={() => setMobileNavOpen(false)}
+                >
+                  ×
+                </button>
 
-              <Button w="full" variant="ghost">
-                Features
-              </Button>
-              <Button w="full" variant="ghost">
-                Pricing
-              </Button>
-              <Button w="full" variant="ghost">
-                Blog
-              </Button>
-              <Button w="full" variant="ghost">
-                Company
-              </Button>
-              <Button w="full" variant="ghost">
-                Sign in
-              </Button>
-            </VStack>
-          </Box>
-        </HStack>
-      </Flex>
-    </Box>
+                <button className="w-full px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                  Features
+                </button>
+                <button className="w-full px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                  Pricing
+                </button>
+                <button className="w-full px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                  Blog
+                </button>
+                <button className="w-full px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                  Company
+                </button>
+                <button className="w-full px-4 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                  Sign in
+                </button>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </header>
   )
 }

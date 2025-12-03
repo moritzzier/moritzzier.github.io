@@ -1,3 +1,1 @@
-module.exports = {
-  swcMinify: true,
-}
+module.exports = {}
