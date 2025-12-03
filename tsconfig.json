@@ -16,9 +16,12 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "paths": {
-      "@elements": [
+      "@/*": [
+        "./*"
+      ],
+      "@components": [
         "./components"
       ],
       "@layouts": [
@@ -34,13 +37,20 @@
         "./app/styles"
       ]
     },
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "jest.config.js"
+    "jest.config.js",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

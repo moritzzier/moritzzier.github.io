@@ -1,28 +1,22 @@
-import Head from 'next/head'
+import type { Metadata } from 'next'
 import {
   Container,
   Box,
   Heading,
   Link,
-  UnorderedList,
   ListItem,
   Text,
+  List,
 } from '@chakra-ui/react'
 import Navbar from './../components/Navbar'
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'Moritz Zier',
+}
+
+export default function Page() {
   return (
     <>
-      <Head>
-        <title>Portfolio - Moritz Zier</title>
-        <meta name="description" content="My Webdev Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Noto+Serif&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <Navbar />
       <Container>
         <Box id="home">
@@ -49,14 +43,14 @@ export default function Home() {
         <Box id="contact">
           <Heading size="lg">Contact</Heading>
           <Text>How to reach me:</Text>
-          <UnorderedList>
+          <List.Root>
             <ListItem>
               <Link href="mailto:moritz.zier@gmail.com">Email</Link>
             </ListItem>
             <ListItem>
               <Link href="https://github.com/moritzzier">Github</Link>
             </ListItem>
-          </UnorderedList>
+          </List.Root>
         </Box>
       </Container>
     </>
