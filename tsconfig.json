@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -14,13 +18,31 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
-      "@elements": ["./components"],
-      "@layouts": ["./app/components/layouts"],
-      "@modules": ["./app/components/modules"],
-      "@templates": ["./app/components/templates"],
-      "@styles": ["./app/styles"],
-    }
+      "@elements": [
+        "./components"
+      ],
+      "@layouts": [
+        "./app/components/layouts"
+      ],
+      "@modules": [
+        "./app/components/modules"
+      ],
+      "@templates": [
+        "./app/components/templates"
+      ],
+      "@styles": [
+        "./app/styles"
+      ]
+    },
+    "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "jest.config.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
